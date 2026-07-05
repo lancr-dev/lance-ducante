@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Seasons';
+  src: url(../fonts/The\ Seasons\ Bold.ttf);
+}
+
+:root {
+  --color-primary: #ffffff;
+  --color-secondary: #000000;
+  --color-text: #ff0000;
+}
