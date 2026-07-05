@@ -11,6 +11,48 @@
     <title>Lance Ducante</title>
   </head>
   <body>
+    <nav>
+      <nav class="nav-bar">
+        <a class="logo-link" href="#home">
+          <div class="logo">
+            <img src="images/lance-logo.png" alt="logo" />
+            <p>Lance Ducante</p>
+          </div>
+        </a>
+
+        <div class="nav-links">
+          <a href="#about" class="hide-on-mobile">ABOUT</a>
+          <a href="#experience" class="hide-on-mobile">EXPERIENCE</a>
+          <a href="#skills" class="hide-on-mobile">SKILLS</a>
+          <a href="#projects" class="hide-on-mobile">PROJECTS</a>
+          <a href="#contact" class="hide-on-mobile">CONTACT</a>
+
+          <button class="side-bar-btn" onclick="openSideBar()">
+            <img src="icons/menu.png" alt="menu/icon" width="25" height="25" />
+          </button>
+        </div>
+
+        <a
+          href="https://www.facebook.com/ZypshotzPage"
+          target="_blank"
+          class="workspace-link"
+          ><button class="workspace-btn">WORKSPACE</button></a
+        >
+      </nav>
+
+      <div class="side-bar">
+        <button class="close-side-bar" onclick="closeSideBar()">
+          <img src="icons/close.png" alt="menu/icon" width="30" height="30" />
+        </button>
+
+        <a href="#about">ABOUT</a>
+        <a href="#experience">EXPERIENCE</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+    </nav>
+
     <script src="script.js"></script>
   </body>
 </html>
