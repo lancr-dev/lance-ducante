@@ -655,6 +655,85 @@ body {
   gap: 0.6rem;
 }
 
+.skills {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: clamp(4rem, 8vw, 6rem) 0;
+}
+
+.skill-container {
+  width: min(1400px, 90%);
+  margin: auto;
+}
+
+.skill-header {
+  text-align: center;
+  margin-bottom: clamp(3rem, 6vw, 4rem);
+}
+
+.skill-header h2 {
+  color: var(--color-text);
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  letter-spacing: 0.12em;
+}
+
+.skill-header h3 {
+  font-family: 'Seasons', sans-serif;
+  color: var(--color-primary);
+  font-weight: 400;
+  line-height: 0.9;
+
+  font-size: clamp(3rem, 6vw, 4.5rem);
+}
+
+.skill-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.skill-card {
+  flex: 1 1 260px;
+  max-width: 345px;
+  min-height: 420px;
+  border: 2px solid var(--color-secondary);
+  border-radius: 1.8rem;
+  padding: clamp(1.2rem, 2.5vw, 1.6rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-card h4 {
+  font-family: 'Seasons', sans-serif;
+  font-weight: 400;
+  color: var(--color-text);
+  font-size: clamp(1.3rem, 1.7vw, 1.7rem);
+  margin-bottom: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-content: start;
+  gap: clamp(1rem, 1.5vw, 1.4rem);
+}
+
+.skill-item {
+  width: clamp(60px, 5vw, 76px);
+  height: clamp(60px, 5vw, 76px);
+}
+
+.skill-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
 @media (max-width: 1200px) {
   .side-bar-btn {
     display: flex;
@@ -683,6 +762,11 @@ body {
 
   .hero-image img {
     width: min(100%, 280px);
+  }
+
+  .skill-card {
+    max-width: 320px;
+    min-height: 390px;
   }
 }
 
@@ -722,6 +806,26 @@ body {
 
   .social-card {
     width: 140px;
+  }
+
+  .skill-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-card {
+    width: 100%;
+    max-width: 340px;
+    min-height: auto;
+  }
+
+  .skill-item {
+    width: 58px;
+    height: 58px;
+  }
+
+  .skill-grid {
+    gap: 1rem;
   }
 }
 
