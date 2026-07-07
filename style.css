@@ -331,7 +331,7 @@ body {
 }
 
 .hero-image img {
-  width: min(100%, 450px);
+  width: min(100%, 500px);
   height: auto;
   display: block;
 }
