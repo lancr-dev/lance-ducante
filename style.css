@@ -640,21 +640,6 @@ body {
   letter-spacing: 0.04em;
 }
 
-.exp-tag-dot {
-  width: clamp(6px, 0.7vw, 8px);
-  height: clamp(6px, 0.7vw, 8px);
-  background: #4dff00;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.title-with-dot {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-}
-
 .skills {
   min-height: 70vh;
   display: flex;
@@ -710,7 +695,6 @@ body {
   font-weight: 400;
   color: var(--color-text);
   font-size: clamp(1.3rem, 1.7vw, 1.7rem);
-  margin-bottom: clamp(1.2rem, 2vw, 1.5rem);
 }
 
 .skill-grid {
@@ -719,6 +703,7 @@ body {
   justify-items: center;
   align-content: start;
   gap: clamp(1rem, 1.5vw, 1.4rem);
+  margin-top: clamp(1.2rem, 2vw, 1.5rem);
 }
 
 .skill-item {
@@ -732,6 +717,157 @@ body {
   display: block;
   object-fit: cover;
   border-radius: 100%;
+}
+
+.projects {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: clamp(4rem, 8vw, 6rem) 0;
+}
+
+.proj-container {
+  width: min(1650px, 94%);
+  margin: auto;
+}
+
+.proj-header {
+  text-align: center;
+  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.proj-header h2 {
+  color: var(--color-text);
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  letter-spacing: 0.12em;
+}
+
+.proj-header h3 {
+  font-family: 'Seasons', sans-serif;
+  color: var(--color-secondary);
+  font-weight: 400;
+  line-height: 0.9;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+}
+
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(380px, 1fr));
+  justify-content: center;
+  gap: clamp(1.2rem, 2vw, 1.8rem);
+}
+
+.proj-card {
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  padding: clamp(1.1rem, 2vw, 1.4rem);
+  display: flex;
+  flex-direction: column;
+  min-height: 270px;
+}
+
+.proj-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: clamp(1rem, 2vw, 1.2rem);
+}
+
+.proj-year {
+  color: var(--color-text);
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  letter-spacing: 0.08em;
+}
+
+.proj-category {
+  color: var(--color-secondary);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+}
+
+.proj-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.proj-logo {
+  flex-shrink: 0;
+}
+
+.proj-logo img {
+  width: clamp(40px, 5vw, 52px);
+  height: clamp(40px, 5vw, 52px);
+  display: block;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.proj-title h4 {
+  font-family: 'Seasons', sans-serif;
+  color: var(--color-primary);
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: clamp(1.4rem, 2vw, 1.9rem);
+}
+
+.proj-description {
+  color: var(--color-text);
+  line-height: 1.55;
+  font-size: clamp(0.9rem, 1vw, 1.05rem);
+  margin-bottom: clamp(1.4rem, 2vw, 1.8rem);
+  text-align: justify;
+}
+
+.proj-footer {
+  margin-top: auto;
+}
+
+.proj-divider {
+  width: 100%;
+  height: 2px;
+  background: var(--color-secondary);
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+
+.proj-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: clamp(1rem, 1.1vw, 1.15rem);
+  transition: 0.3s ease;
+}
+
+.proj-link:hover {
+  transform: scale(1.1);
+  text-decoration: underline;
+}
+
+.proj-link img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* do not move this */
+.exp-tag-dot {
+  width: clamp(6px, 0.7vw, 8px);
+  height: clamp(6px, 0.7vw, 8px);
+  background: #4dff00;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.title-with-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
 }
 
 @media (max-width: 1200px) {
@@ -767,6 +903,10 @@ body {
   .skill-card {
     max-width: 320px;
     min-height: 390px;
+  }
+
+  .proj-grid {
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
   }
 }
 
@@ -826,6 +966,31 @@ body {
 
   .skill-grid {
     gap: 1rem;
+  }
+
+  .proj-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proj-card {
+    padding: 1rem;
+  }
+
+  .proj-title {
+    gap: 0.8rem;
+  }
+
+  .proj-logo img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .proj-title h4 {
+    font-size: 1.4rem;
+  }
+
+  .proj-description {
+    font-size: 0.9rem;
   }
 }
 
