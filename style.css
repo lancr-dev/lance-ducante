@@ -361,7 +361,7 @@ body {
 
 .trusted-title {
   font-family: 'Seasons', sans-serif;
-  color: #79c84b;
+  color: var(--color-primary);
   font-weight: 500;
   font-size: clamp(1.1rem, 1.8vw, 1.3rem);
 }
@@ -383,14 +383,14 @@ body {
 }
 
 .about-heading h2 {
-  color: #ffffff;
+  color: var(--color-text);
   font-size: clamp(0.8rem, 1vw, 1rem);
   letter-spacing: 0.12em;
 }
 
 .about-heading h3 {
   font-family: 'Seasons', sans-serif;
-  color: #61d6ff;
+  color: var(--color-secondary);
   font-weight: 400;
   line-height: 0.9;
   margin-bottom: 1rem;
@@ -399,7 +399,7 @@ body {
 }
 
 .about-subtitle {
-  color: #f2f2f2;
+  color: var(--color-text);
   font-size: clamp(1.1rem, 2vw, 2rem);
 }
 
@@ -419,7 +419,7 @@ body {
 }
 
 .about-content strong {
-  color: #f2f2f2;
+  color: var(--color-text);
   font-weight: 500;
 }
 
@@ -429,7 +429,7 @@ body {
 
 .social-title {
   font-family: 'Seasons', sans-serif;
-  color: #ffffff;
+  color: var(--color-text);
   font-weight: 400;
   font-size: clamp(1.2rem, 2.5vw, 1.5rem);
 }
@@ -459,7 +459,7 @@ body {
 }
 
 .social-card span {
-  color: #fff;
+  color: var(--color-text);
   font-size: clamp(0.8rem, 0.9vw, 1rem);
 }
 
@@ -481,14 +481,14 @@ body {
 }
 
 .edu-header h2 {
-  color: #fff;
+  color: var(--color-text);
   font-size: clamp(0.8rem, 1vw, 1rem);
   letter-spacing: 0.12em;
 }
 
 .edu-header h3 {
   font-family: 'Seasons', sans-serif;
-  color: #79c84b;
+  color: var(--color-primary);
   font-weight: 400;
   line-height: 0.9;
 
@@ -525,7 +525,7 @@ body {
 
 .edu-details h4 {
   font-family: 'Seasons', sans-serif;
-  color: #f2f2f2;
+  color: var(--color-text);
   font-weight: 400;
   line-height: 1.3;
   font-size: clamp(1.2rem, 2vw, 1.5rem);
@@ -533,13 +533,13 @@ body {
 }
 
 .edu-date {
-  color: #f2f2f2;
+  color: var(--color-text);
   font-size: clamp(0.8rem, 1.2vw, 1.1rem);
   margin-bottom: 0.4rem;
 }
 
 .edu-degree {
-  color: #f2f2f2;
+  color: var(--color-text);
   font-size: clamp(0.8rem, 1.2vw, 1.1rem);
   line-height: 1.6;
 }
@@ -562,14 +562,14 @@ body {
 }
 
 .exp-header h2 {
-  color: #fff;
+  color: var(--color-text);
   font-size: clamp(0.8rem, 1vw, 1rem);
   letter-spacing: 0.12em;
 }
 
 .exp-header h3 {
   font-family: 'Seasons', sans-serif;
-  color: #61d6ff;
+  color: var(--color-secondary);
   font-weight: 400;
   line-height: 0.9;
 
@@ -606,7 +606,7 @@ body {
 
 .exp-details h4 {
   font-family: 'Seasons', sans-serif;
-  color: #f2f2f2;
+  color: var(--color-text);
   font-weight: 400;
   line-height: 1.3;
   font-size: clamp(1.2rem, 2vw, 1.5rem);
@@ -614,7 +614,7 @@ body {
 }
 
 .exp-date {
-  color: #f2f2f2;
+  color: var(--color-text);
   font-size: clamp(0.8rem, 1.2vw, 1.1rem);
   margin-bottom: 0.8rem;
 }
@@ -635,7 +635,7 @@ body {
   padding: clamp(0.3rem, 0.7vw, 0.45rem) clamp(0.9rem, 2vw, 1.3rem);
   background: #9c9c9c88;
   border-radius: 999px;
-  color: #fff;
+  color: var(--color-text);
   font-size: clamp(0.5rem, 0.9vw, 0.9rem);
   letter-spacing: 0.04em;
 }
@@ -643,7 +643,7 @@ body {
 .exp-tag-dot {
   width: clamp(6px, 0.7vw, 8px);
   height: clamp(6px, 0.7vw, 8px);
-  background: #7ed957;
+  background: #4dff00;
   border-radius: 50%;
   flex-shrink: 0;
 }
