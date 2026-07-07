@@ -367,6 +367,7 @@ body {
 }
 
 .trusted-grid {
+  margin-top: clamp(1rem, 3vw, 2rem);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -380,6 +381,7 @@ body {
 .trusted-item img {
   width: 100%;
   display: block;
+  border-radius: 100%;
 }
 
 .about-heading h2 {
