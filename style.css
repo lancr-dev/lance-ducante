@@ -209,7 +209,6 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: #161616;
   overflow: hidden;
 }
 
@@ -374,7 +373,7 @@ body {
 }
 
 .trusted-item {
-  width: clamp(140px, 14vw, 180px);
+  width: clamp(100px, 14vw, 140px);
 }
 
 .trusted-item img {
@@ -431,11 +430,11 @@ body {
   font-family: 'Seasons', sans-serif;
   color: #ffffff;
   font-weight: 400;
-  margin-bottom: 1.5rem;
   font-size: clamp(1.2rem, 2.5vw, 1.5rem);
 }
 
 .social-grid {
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -448,7 +447,7 @@ body {
   justify-content: center;
   gap: 0.6rem;
   width: clamp(150px, 14vw, 170px);
-  padding: clamp(0.45rem, 0.8vw, 0.6rem) clamp(1rem, 2vw, 1.3rem);
+  padding: clamp(0.45rem, 0.8vw, 0.4rem) clamp(1rem, 2vw, 1.3rem);
   background: #9c9c9c88;
   border-radius: 999px;
   text-decoration: none;
@@ -464,7 +463,7 @@ body {
 }
 
 .education {
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
   padding: clamp(4rem, 8vw, 6rem) 0;
@@ -545,7 +544,7 @@ body {
 }
 
 .experience {
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
   padding: clamp(4rem, 8vw, 6rem) 0;
@@ -648,6 +647,13 @@ body {
   flex-shrink: 0;
 }
 
+.title-with-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
 @media (max-width: 1200px) {
   .side-bar-btn {
     display: flex;
@@ -734,7 +740,6 @@ body {
   .social-card {
     width: calc(50% - 0.8rem);
     max-width: 170px;
-
     padding: clamp(0.45rem, 0.8vw, 0.55rem) clamp(0.8rem, 2vw, 1rem);
   }
 
