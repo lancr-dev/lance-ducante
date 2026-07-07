@@ -375,7 +375,7 @@ body {
 }
 
 .trusted-item {
-  width: clamp(100px, 14vw, 140px);
+  width: clamp(80px, 14vw, 100px);
 }
 
 .trusted-item img {
@@ -514,8 +514,8 @@ body {
 }
 
 .edu-logo img {
-  width: clamp(70px, 8vw, 100px);
-  height: clamp(70px, 8vw, 100px);
+  width: clamp(60px, 8vw, 80px);
+  height: clamp(60px, 8vw, 80px);
   display: block;
   object-fit: cover;
   border-radius: 100%;
@@ -530,19 +530,19 @@ body {
   color: var(--color-text);
   font-weight: 400;
   line-height: 1.3;
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   margin-bottom: 0.35rem;
 }
 
 .edu-date {
   color: var(--color-text);
-  font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+  font-size: clamp(0.7rem, 1.2vw, 1rem);
   margin-bottom: 0.4rem;
 }
 
 .edu-degree {
   color: var(--color-text);
-  font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+  font-size: clamp(0.7rem, 1.2vw, 1rem);
   line-height: 1.6;
 }
 
@@ -595,8 +595,8 @@ body {
 }
 
 .exp-logo img {
-  width: clamp(70px, 8vw, 100px);
-  height: clamp(70px, 8vw, 100px);
+  width: clamp(60px, 8vw, 80px);
+  height: clamp(60px, 8vw, 80px);
   display: block;
   object-fit: cover;
   border-radius: 100%;
@@ -611,13 +611,13 @@ body {
   color: var(--color-text);
   font-weight: 400;
   line-height: 1.3;
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   margin-bottom: 0.35rem;
 }
 
 .exp-date {
   color: var(--color-text);
-  font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+  font-size: clamp(0.7rem, 1.2vw, 1rem);
   margin-bottom: 0.8rem;
 }
 
@@ -638,7 +638,7 @@ body {
   background: #9c9c9c88;
   border-radius: 999px;
   color: var(--color-text);
-  font-size: clamp(0.5rem, 0.9vw, 0.9rem);
+  font-size: clamp(0.5rem, 0.9vw, 0.7rem);
   letter-spacing: 0.04em;
 }
 
@@ -1081,7 +1081,7 @@ body {
   }
 
   .trusted-item {
-    width: 130px;
+    width: 80px;
   }
 
   .social-grid {
@@ -1158,7 +1158,7 @@ body {
   }
 
   .trusted-item {
-    width: 120px;
+    width: 60px;
   }
 
   .social-grid {
