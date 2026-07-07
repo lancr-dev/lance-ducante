@@ -514,9 +514,9 @@ body {
 .edu-logo img {
   width: clamp(70px, 8vw, 100px);
   height: clamp(70px, 8vw, 100px);
-
   display: block;
   object-fit: cover;
+  border-radius: 100%;
 }
 
 .edu-details {
@@ -595,9 +595,9 @@ body {
 .exp-logo img {
   width: clamp(70px, 8vw, 100px);
   height: clamp(70px, 8vw, 100px);
-
   display: block;
   object-fit: cover;
+  border-radius: 100%;
 }
 
 .exp-details {
@@ -707,8 +707,8 @@ body {
 }
 
 .skill-item {
-  width: clamp(60px, 5vw, 76px);
-  height: clamp(60px, 5vw, 76px);
+  width: clamp(60px, 5vw, 70px);
+  height: clamp(60px, 5vw, 70px);
 }
 
 .skill-item img {
