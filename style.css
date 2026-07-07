@@ -255,7 +255,7 @@ body {
   font-family: 'Seasons', sans-serif;
   line-height: 1;
   font-weight: 400;
-  font-size: clamp(2.8rem, 6.5vw, 5.6rem);
+  font-size: clamp(2.8rem, 6.5vw, 6rem);
   margin-bottom: 1.4rem;
 }
 
@@ -272,9 +272,9 @@ body {
 }
 
 .hero-description {
-  max-width: 500px;
+  max-width: 550px;
   color: var(--color-text);
-  font-size: clamp(0.8rem, 1vw, 1rem);
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
   line-height: 1.7;
   margin-bottom: 2rem;
 }
@@ -400,7 +400,7 @@ body {
 
 .about-subtitle {
   color: #f2f2f2;
-  font-size: clamp(1.2rem, 2vw, 2rem);
+  font-size: clamp(1.1rem, 2vw, 2rem);
 }
 
 .about-subtitle span {
@@ -413,7 +413,7 @@ body {
 
 .about-content p {
   color: #7d7d7d;
-  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  font-size: clamp(0.9rem, 1.5vw, 1.35rem);
   line-height: 1.7;
   margin-bottom: 1.4rem;
 }
@@ -432,7 +432,7 @@ body {
   color: #ffffff;
   font-weight: 400;
   margin-bottom: 1.5rem;
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
 }
 
 .social-grid {
