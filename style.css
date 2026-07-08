@@ -458,6 +458,7 @@ body {
 
 .social-card img {
   width: clamp(18px, 2vw, 24px);
+  border-radius: 20%;
 }
 
 .social-card span {
