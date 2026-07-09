@@ -86,7 +86,7 @@ body {
 }
 
 .logo p:hover {
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 .logo:hover {
@@ -383,6 +383,12 @@ body {
   width: 100%;
   display: block;
   border-radius: 100%;
+
+  transition: 0.5s ease-out;
+}
+
+.trusted-item img:hover {
+  transform: scale(1.1);
 }
 
 .about-heading h2 {
@@ -455,6 +461,12 @@ body {
   background: #9c9c9c88;
   border-radius: 999px;
   text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.social-card:hover {
+  background: #9c9c9c48;
 }
 
 .social-card img {
