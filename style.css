@@ -301,6 +301,99 @@ body::before {
   letter-spacing: 0.08em;
 }
 
+.skills {
+  min-height: 100vh;
+  padding: clamp(5rem, 8vw, 7rem) clamp(2rem, 5.5vw, 5rem);
+  color: var(--color-text);
+}
+
+.skills__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.skills__label {
+  color: rgb(255 255 255 / 70%);
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.skills__header h2 {
+  color: rgb(255 255 255 / 70%);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+}
+
+.skills__header h2 span {
+  color: var(--color-primary);
+}
+
+.skills__grid {
+  width: min(100%, 875px);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 1.8vw, 1.5rem);
+  margin: clamp(4rem, 9vh, 5.5rem) auto 0;
+}
+
+.skills__card {
+  min-height: 430px;
+  padding: clamp(1.75rem, 2.5vw, 2.25rem);
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 20px;
+  background-color: rgb(71 71 71 / 25%);
+}
+
+.skills__card h3 {
+  color: rgb(255 255 255 / 90%);
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.skills__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  margin-top: 1.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.skills__list li {
+  position: relative;
+  padding-left: 0.85rem;
+  color: rgb(255 255 255 / 65%);
+  font-size: clamp(0.8rem, 1.1vw, 0.95rem);
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+}
+
+.skills__list li::before {
+  content: '-';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+}
+
+@media (max-width: 900px) {
+  .skills__grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 650px;
+  }
+
+  .skills__card {
+    min-height: 350px;
+    text-align: center;
+  }
+}
+
 @media (max-width: 768px) {
   .services {
     padding-top: 5rem;
@@ -382,5 +475,37 @@ body::before {
   .home__stats {
     width: 100%;
     gap: 2rem;
+  }
+
+  .skills {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .skills__grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 500px;
+    gap: 0.75rem;
+    margin-top: 3rem;
+  }
+
+  .skills__card {
+    min-height: auto;
+    padding: 1.5rem 1rem;
+    text-align: left;
+  }
+
+  .skills__card h3 {
+    font-size: 0.95rem;
+  }
+
+  .skills__list {
+    gap: 0.9rem;
+    margin-top: 1.5rem;
+  }
+
+  .skills__list li {
+    padding-left: 0.7rem;
+    font-size: 0.75rem;
   }
 }
