@@ -302,7 +302,7 @@ body::before {
 }
 
 .skills {
-  min-height: 100vh;
+  min-height: 80vh;
   padding: clamp(5rem, 8vw, 7rem) clamp(2rem, 5.5vw, 5rem);
   color: var(--color-text);
 }
@@ -383,7 +383,7 @@ body::before {
 }
 
 .faq {
-  min-height: 100vh;
+  min-height: 80vh;
   padding: clamp(5rem, 8vw, 7rem) clamp(2rem, 5.5vw, 5rem);
   color: var(--color-text);
 }
@@ -490,6 +490,138 @@ body::before {
   font-size: clamp(0.75rem, 1.1vw, 0.9rem);
   line-height: 1.7;
   letter-spacing: 0.06em;
+}
+
+.inquire {
+  position: relative;
+  min-height: 80vh;
+  padding: clamp(5rem, 8vw, 7rem) clamp(2rem, 5.5vw, 5rem);
+
+  display: flex;
+  flex-direction: column;
+
+  color: var(--color-text);
+}
+
+.inquire__label {
+  color: rgb(255 255 255 / 65%);
+  font-size: clamp(0.75rem, 1.1vw, 0.9rem);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.inquire__content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.inquire__intro {
+  color: rgb(255 255 255 / 70%);
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+.inquire__intro span {
+  color: var(--color-primary);
+}
+
+.inquire__title {
+  margin-top: 0.35rem;
+
+  color: rgb(255 255 255 / 70%);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0.08em;
+}
+
+.inquire__title span {
+  color: var(--color-primary);
+}
+
+.inquire__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  margin-top: 1.5rem;
+}
+
+.inquire__button {
+  min-width: 180px;
+  min-height: 50px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.8rem 1.5rem;
+
+  border-radius: 12px;
+
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition: border-color 0.3s ease;
+}
+
+.inquire__button--primary {
+  border: 1px solid var(--color-primary);
+
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.inquire__button--secondary {
+  border: 1px solid var(--color-primary);
+
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.footer {
+  min-height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1rem clamp(2rem, 5.5vw, 5rem);
+
+  color: rgb(255 255 255 / 65%);
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer a,
+.footer__copyright {
+  color: inherit;
+  font-size: clamp(0.7rem, 1vw, 0.85rem);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.footer__copyright {
+  text-transform: none;
 }
 
 @media (max-width: 900px) {
@@ -645,5 +777,46 @@ body::before {
 
   .faq__answer p {
     padding-bottom: 1.1rem;
+  }
+
+  .inquire {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .inquire__content {
+    padding: 2rem 0;
+  }
+
+  .inquire__title {
+    line-height: 1.2;
+  }
+
+  .inquire__actions {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    margin-top: 1.5rem;
+  }
+
+  .inquire__button {
+    width: min(100%, 280px);
+  }
+
+  .footer {
+    min-height: 80px;
+
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.75rem;
+
+    padding: 1.25rem 2rem;
+
+    text-align: center;
+  }
+
+  .footer__links {
+    gap: 1.5rem;
   }
 }
