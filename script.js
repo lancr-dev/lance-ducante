@@ -4,32 +4,30 @@ faqItems.forEach((item) => {
   const question = item.querySelector('.faq__question');
   const answer = item.querySelector('.faq__answer');
 
-  question.addEventListener('click', (event) => {
-    event.preventDefault();
+  question.addEventListener('click', () => {
+    const isOpen = item.classList.contains('active');
 
-    if (item.open) {
-      answer.style.maxHeight = `${answer.scrollHeight}px`;
+    faqItems.forEach((faq) => {
+      const faqQuestion = faq.querySelector('.faq__question');
+      const faqAnswer = faq.querySelector('.faq__answer');
 
-      requestAnimationFrame(() => {
-        answer.style.maxHeight = '0px';
-      });
-
-      answer.addEventListener(
-        'transitionend',
-        () => {
-          item.open = false;
-        },
-        { once: true },
-      );
-
-      return;
-    }
-
-    item.open = true;
-    answer.style.maxHeight = '0px';
-
-    requestAnimationFrame(() => {
-      answer.style.maxHeight = `${answer.scrollHeight}px`;
+      faq.classList.remove('active');
+      faqQuestion.setAttribute('aria-expanded', 'false');
+      faqAnswer.style.maxHeight = null;
     });
+
+    if (!isOpen) {
+      item.classList.add('active');
+      question.setAttribute('aria-expanded', 'true');
+      answer.style.maxHeight = `${answer.scrollHeight}px`;
+    }
+  });
+});
+
+window.addEventListener('resize', () => {
+  document.querySelectorAll('.faq__item.active').forEach((item) => {
+    const answer = item.querySelector('.faq__answer');
+
+    answer.style.maxHeight = `${answer.scrollHeight}px`;
   });
 });

@@ -423,57 +423,69 @@ body::before {
 }
 
 .faq__item {
+  overflow: hidden;
   border-radius: 14px;
   background-color: rgb(71 71 71 / 55%);
+}
+
+.faq__item {
   overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  background-color: rgb(71 71 71 / 55%);
+  transition: border-color 0.3s ease;
+}
+
+.faq__item.active {
+  border-color: var(--color-primary);
 }
 
 .faq__question {
+  width: 100%;
   min-height: 62px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
   padding: 1rem clamp(1.25rem, 2.5vw, 1.75rem);
+  border: none;
+  background: transparent;
   color: rgb(255 255 255 / 70%);
+  font-family: inherit;
   font-size: clamp(0.8rem, 1.2vw, 0.95rem);
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.1em;
+  text-align: left;
   cursor: pointer;
-  list-style: none;
 }
 
-.faq__question::-webkit-details-marker {
-  display: none;
+.faq__question span:first-child {
+  flex: 1;
 }
 
-.faq__question::after {
-  content: '⌄';
+.faq__icon {
   flex-shrink: 0;
   color: var(--color-primary);
-  font-size: 1.25rem;
+  font-family: inherit;
+  font-size: 1.1rem;
   line-height: 1;
+  transition: transform 0.3s ease;
 }
 
-.faq__item[open] .faq__question::after {
-  content: '⌃';
+.faq__item.active .faq__icon {
+  transform: rotate(180deg);
 }
 
 .faq__answer {
   max-height: 0;
   overflow: hidden;
-  padding: 0 clamp(1.25rem, 2.5vw, 1.75rem);
-  transition:
-    max-height 0.35s ease,
-    padding 0.35s ease;
-}
-
-.faq__item[open] .faq__answer {
-  padding-bottom: 1.25rem;
+  padding-inline: clamp(1.25rem, 2.5vw, 1.75rem);
+  transition: max-height 0.35s ease;
 }
 
 .faq__answer p {
+  padding-bottom: 1.25rem;
   color: rgb(255 255 255 / 60%);
   font-size: clamp(0.75rem, 1.1vw, 0.9rem);
   line-height: 1.7;
@@ -628,11 +640,10 @@ body::before {
   }
 
   .faq__answer {
-    padding-left: 1.1rem;
-    padding-right: 1.1rem;
+    padding-inline: 1.1rem;
   }
 
-  .faq__item[open] .faq__answer {
+  .faq__answer p {
     padding-bottom: 1.1rem;
   }
 }
