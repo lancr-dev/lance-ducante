@@ -38,6 +38,16 @@ body::before {
   background-size: cover;
 }
 
+::selection {
+  background-color: black;
+  color: var(--color-primary);
+}
+
+::-moz-selection {
+  background-color: black;
+  color: var(--color-primary);
+}
+
 .home {
   min-height: 100vh;
   display: flex;
