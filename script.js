@@ -74,6 +74,55 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
+const nameElement = document.querySelector('.home__typing-name');
+const roleElement = document.querySelector('.home__typing-role');
+
+const nameText = 'Lance Ducante';
+const roleText = ' - Web Designer | Web Developer';
+
+let nameIndex = 0;
+let roleIndex = 0;
+let isDeleting = false;
+
+function typeText() {
+  if (!nameElement || !roleElement) {
+    return;
+  }
+
+  if (!isDeleting) {
+    if (nameIndex < nameText.length) {
+      nameElement.textContent = nameText.slice(0, nameIndex + 1);
+      nameIndex++;
+    } else if (roleIndex < roleText.length) {
+      roleElement.textContent = roleText.slice(0, roleIndex + 1);
+      roleIndex++;
+    } else {
+      isDeleting = true;
+      setTimeout(typeText, 1800);
+      return;
+    }
+
+    setTimeout(typeText, 50);
+    return;
+  }
+
+  if (roleIndex > 0) {
+    roleElement.textContent = roleText.slice(0, roleIndex - 1);
+    roleIndex--;
+  } else if (nameIndex > 0) {
+    nameElement.textContent = nameText.slice(0, nameIndex - 1);
+    nameIndex--;
+  } else {
+    isDeleting = false;
+    setTimeout(typeText, 500);
+    return;
+  }
+
+  setTimeout(typeText, 30);
+}
+
+typeText();
+
 const statNumbers = document.querySelectorAll('.home__stat-number');
 
 function animateStat(stat) {
