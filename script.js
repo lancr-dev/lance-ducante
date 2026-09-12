@@ -74,6 +74,52 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
+const statNumbers = document.querySelectorAll('.home__stat-number');
+
+function animateStat(stat) {
+  const target = Number(stat.dataset.value);
+  const duration = 1200;
+  const startTime = performance.now();
+
+  function updateStat(currentTime) {
+    const elapsedTime = currentTime - startTime;
+    const progress = Math.min(elapsedTime / duration, 1);
+
+    const currentValue = Math.floor(progress * target);
+
+    stat.textContent = `${currentValue}+`;
+
+    if (progress < 1) {
+      requestAnimationFrame(updateStat);
+    }
+  }
+
+  requestAnimationFrame(updateStat);
+}
+
+const statsObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        statNumbers.forEach((stat) => {
+          animateStat(stat);
+        });
+
+        observer.disconnect();
+      }
+    });
+  },
+  {
+    threshold: 0.5,
+  },
+);
+
+const stats = document.querySelector('.home__stats');
+
+if (stats) {
+  statsObserver.observe(stats);
+}
+
 const faqItems = document.querySelectorAll('.faq__item');
 
 faqItems.forEach((item) => {
