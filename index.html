@@ -15,6 +15,56 @@
     <title>Lance Ducante</title>
   </head>
   <body>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Main navigation">
+        <a href="#home" class="navbar__logo"> Lance Ducante </a>
+
+        <div class="navbar__links">
+          <a href="#home" class="navbar__link">Home</a>
+          <a href="#work" class="navbar__link">Work</a>
+          <a href="#services" class="navbar__link">Services</a>
+          <a href="#skills" class="navbar__link">Skills</a>
+          <a href="#faq" class="navbar__link">FAQ</a>
+          <a href="#inquire" class="navbar__link navbar__link--button">
+            Inquire
+          </a>
+        </div>
+
+        <button
+          type="button"
+          class="navbar__menu-button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-sidebar"
+        >
+          <img src="icons/menu.png" alt="menu" />
+        </button>
+      </nav>
+    </header>
+
+    <aside id="mobile-sidebar" class="sidebar" aria-hidden="true">
+      <div class="sidebar__header">
+        <span class="sidebar__title">Menu</span>
+
+        <button
+          type="button"
+          class="sidebar__close-button"
+          aria-label="Close navigation menu"
+        >
+          <img src="icons/close.png" alt="close" />
+        </button>
+      </div>
+
+      <nav class="sidebar__links" aria-label="Mobile navigation">
+        <a href="#home" class="sidebar__link">Home</a>
+        <a href="#work" class="sidebar__link">Work</a>
+        <a href="#services" class="sidebar__link">Services</a>
+        <a href="#skills" class="sidebar__link">Skills</a>
+        <a href="#faq" class="sidebar__link">FAQ</a>
+        <a href="#inquire" class="sidebar__link">Inquire</a>
+      </nav>
+    </aside>
+
     <section id="home" class="home">
       <div class="home__content">
         <h1>
