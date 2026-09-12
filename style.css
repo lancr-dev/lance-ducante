@@ -1038,6 +1038,7 @@ body::before {
 
   .inquire__title {
     line-height: 1.2;
+    max-width: 300px;
   }
 
   .inquire__actions {
