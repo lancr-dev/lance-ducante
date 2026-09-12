@@ -963,7 +963,7 @@ body::before {
   }
 
   .services__list-title {
-    text-align: left;
+    text-align: center;
   }
 
   .services__grid {
