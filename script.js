@@ -78,7 +78,7 @@ const nameElement = document.querySelector('.home__typing-name');
 const roleElement = document.querySelector('.home__typing-role');
 
 const nameText = 'Lance Ducante';
-const roleText = ' - Web Designer | Web Developer';
+const roleText = ' - Web Designer | Web Developer | Freelance';
 
 let nameIndex = 0;
 let roleIndex = 0;
