@@ -771,6 +771,7 @@ body::before {
 
 .skills__card:hover {
   border: 1px solid var(--color-primary);
+  transform: translateY(-10px);
 }
 
 .skills__card h3 {
