@@ -79,14 +79,14 @@ body::before {
   color: var(--color-text);
 }
 
-.nav-logo-title {
+.nav__logo__title {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 6px;
 }
 
-.nav-logo {
+.nav__logo {
   height: 40px;
 }
 
@@ -689,6 +689,10 @@ body::before {
   border-radius: 14px;
   background-color: rgb(71 71 71 / 55%);
   transition: border-color 0.3s ease;
+}
+
+.faq__item:hover {
+  border-color: var(--color-primary);
 }
 
 .faq__item.active {
