@@ -6,7 +6,7 @@ const navbarLinks = document.querySelectorAll('.navbar__link');
 const sidebarLinks = document.querySelectorAll('.sidebar__link');
 
 const sections = document.querySelectorAll(
-  '#home, #services, #skills, #faq, #inquire',
+  '#home, #work, #services, #skills, #faq, #inquire',
 );
 
 function openSidebar() {
