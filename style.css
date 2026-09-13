@@ -79,6 +79,17 @@ body::before {
   color: var(--color-text);
 }
 
+.nav-logo-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-logo {
+  height: 40px;
+}
+
 .navbar__logo {
   color: var(--color-text);
   font-size: clamp(1rem, 1.5vw, 1.2rem);
@@ -86,6 +97,12 @@ body::before {
   letter-spacing: 0.16em;
   text-decoration: none;
   white-space: nowrap;
+
+  transition: 0.2s ease;
+}
+
+.navbar__logo:hover {
+  color: var(--color-primary);
 }
 
 .navbar__links {
