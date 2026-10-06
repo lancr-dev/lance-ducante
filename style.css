@@ -610,7 +610,6 @@ body::before {
 
 .work-card:hover {
   background-color: rgb(37, 37, 37);
-  transform: translateY(-10px);
   border-color: var(--color-primary);
 }
 
@@ -655,7 +654,7 @@ body::before {
   flex-shrink: 0;
 
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: 15%;
 }
 
 .work-card__logo img {
@@ -771,7 +770,6 @@ body::before {
 
 .skills__card:hover {
   border: 1px solid var(--color-primary);
-  transform: translateY(-10px);
 }
 
 .skills__card h3 {
