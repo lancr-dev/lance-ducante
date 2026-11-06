@@ -1,6 +1,7 @@
 const menuButton = document.querySelector('.navbar__menu-button');
 const closeButton = document.querySelector('.sidebar__close-button');
 const sidebar = document.querySelector('.sidebar');
+const backdrop = document.querySelector('.sidebar-backdrop');
 
 const navbarLinks = document.querySelectorAll('.navbar__link');
 const sidebarLinks = document.querySelectorAll('.sidebar__link');
@@ -9,8 +10,17 @@ const sections = document.querySelectorAll(
   '#home, #work, #services, #skills, #faq, #inquire',
 );
 
+const desktopViewport = window.matchMedia('(min-width: 901px)');
+
+const reducedMotion = window.matchMedia(
+  '(prefers-reduced-motion: reduce)',
+).matches;
+
 function openSidebar() {
   sidebar.classList.add('active');
+  backdrop.classList.add('active');
+
+  document.body.classList.add('sidebar-open');
 
   menuButton.setAttribute('aria-expanded', 'true');
   sidebar.setAttribute('aria-hidden', 'false');
@@ -19,9 +29,14 @@ function openSidebar() {
 }
 
 function closeSidebar() {
-  menuButton.focus();
+  if (menuButton.offsetParent !== null) {
+    menuButton.focus();
+  }
 
   sidebar.classList.remove('active');
+  backdrop.classList.remove('active');
+
+  document.body.classList.remove('sidebar-open');
 
   menuButton.setAttribute('aria-expanded', 'false');
   sidebar.setAttribute('aria-hidden', 'true');
@@ -31,8 +46,16 @@ menuButton.addEventListener('click', openSidebar);
 
 closeButton.addEventListener('click', closeSidebar);
 
+backdrop.addEventListener('click', closeSidebar);
+
 sidebarLinks.forEach((link) => {
   link.addEventListener('click', closeSidebar);
+});
+
+desktopViewport.addEventListener('change', (event) => {
+  if (event.matches && sidebar.classList.contains('active')) {
+    closeSidebar();
+  }
 });
 
 function setActiveLink(sectionId) {
@@ -89,6 +112,12 @@ function typeText() {
     return;
   }
 
+  if (reducedMotion) {
+    nameElement.textContent = nameText;
+    roleElement.textContent = roleText;
+    return;
+  }
+
   if (!isDeleting) {
     if (nameIndex < nameText.length) {
       nameElement.textContent = nameText.slice(0, nameIndex + 1);
@@ -126,6 +155,11 @@ typeText();
 const statNumbers = document.querySelectorAll('.home__stat-number');
 
 function animateStat(stat) {
+  if (reducedMotion) {
+    stat.textContent = `${stat.dataset.value}+`;
+    return;
+  }
+
   const target = Number(stat.dataset.value);
   const duration = 1200;
   const startTime = performance.now();
