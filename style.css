@@ -471,7 +471,7 @@ body.sidebar-open {
 
 .services__intro {
   align-self: center;
-  max-width: 600px;
+  max-width: 100%;
 }
 
 .services__intro h3 {
@@ -1237,6 +1237,10 @@ body.sidebar-open {
 }
 
 @media (max-width: 600px) {
+  .services__intro h3 br {
+    display: none;
+  }
+
   .home {
     padding-top: 6.5rem;
   }
